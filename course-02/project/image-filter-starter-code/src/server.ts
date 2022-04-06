@@ -32,7 +32,6 @@ var validator = require('validator');
   app.get( "/filteredimage", async ( req, res ) => {
     // Read image url from query
     const image_url = req.query.image_url;
-    let image_path = ''
     try {
       // Validate image url not null
       if(!image_url) {
@@ -42,7 +41,7 @@ var validator = require('validator');
         res.status(500).send("Image url isn't valid")
       } else {
         // Filter image
-        image_path = await filterImageFromURL(image_url);
+        const image_path = await filterImageFromURL(image_url);
         // Send file to the response
         res.sendFile(image_path, (err) => {
           // Delete image after done
