@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "378f37f9-d284-4c0b-8f9d-ebc31a974e97",
+		"name": "Udacity_Project2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Project2",
+			"item": [
+				{
+					"name": "Local",
+					"item": [
+						{
+							"name": "Null url",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/filteredimage?image_url=",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"filteredimage"
+									],
+									"query": [
+										{
+											"key": "image_url",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invalid url",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/filteredimage?image_url=123",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"filteredimage"
+									],
+									"query": [
+										{
+											"key": "image_url",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Error image url",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"filteredimage"
+									],
+									"query": [
+										{
+											"key": "image_url",
+											"value": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Work url",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/filteredimage?image_url=https://images.theconversation.com/files/443350/original/file-20220131-15-1ndq1m6.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C3354%2C2464&q=45&auto=format&w=926&fit=clip",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"filteredimage"
+									],
+									"query": [
+										{
+											"key": "image_url",
+											"value": "https://images.theconversation.com/files/443350/original/file-20220131-15-1ndq1m6.jpg?ixlib=rb-1.1.0"
+										},
+										{
+											"key": "rect",
+											"value": "0%2C0%2C3354%2C2464"
+										},
+										{
+											"key": "q",
+											"value": "45"
+										},
+										{
+											"key": "auto",
+											"value": "format"
+										},
+										{
+											"key": "w",
+											"value": "926"
+										},
+										{
+											"key": "fit",
+											"value": "clip"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cloud",
+					"item": [
+						{
+							"name": "Cloud - Work url",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://hoanghuynh-project2-image-filter-starte.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://images.theconversation.com/files/443350/original/file-20220131-15-1ndq1m6.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C3354%2C2464&q=45&auto=format&w=926&fit=clip",
+									"protocol": "http",
+									"host": [
+										"hoanghuynh-project2-image-filter-starte",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"filteredimage"
+									],
+									"query": [
+										{
+											"key": "image_url",
+											"value": "https://images.theconversation.com/files/443350/original/file-20220131-15-1ndq1m6.jpg?ixlib=rb-1.1.0"
+										},
+										{
+											"key": "rect",
+											"value": "0%2C0%2C3354%2C2464"
+										},
+										{
+											"key": "q",
+											"value": "45"
+										},
+										{
+											"key": "auto",
+											"value": "format"
+										},
+										{
+											"key": "w",
+											"value": "926"
+										},
+										{
+											"key": "fit",
+											"value": "clip"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cloud - Null url",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://hoanghuynh-project2-image-filter-starte.us-east-1.elasticbeanstalk.com/filteredimage?image_url=",
+									"protocol": "http",
+									"host": [
+										"hoanghuynh-project2-image-filter-starte",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"filteredimage"
+									],
+									"query": [
+										{
+											"key": "image_url",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cloud - Invalid url",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://hoanghuynh-project2-image-filter-starte.us-east-1.elasticbeanstalk.com/filteredimage?image_url=123",
+									"protocol": "http",
+									"host": [
+										"hoanghuynh-project2-image-filter-starte",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"filteredimage"
+									],
+									"query": [
+										{
+											"key": "image_url",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cloud - Error image url",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://hoanghuynh-project2-image-filter-starte.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg",
+									"protocol": "http",
+									"host": [
+										"hoanghuynh-project2-image-filter-starte",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"filteredimage"
+									],
+									"query": [
+										{
+											"key": "image_url",
+											"value": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

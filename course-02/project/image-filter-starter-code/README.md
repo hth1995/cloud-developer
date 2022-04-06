@@ -46,3 +46,16 @@ Prevent requests without valid authentication headers.
 
 Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
 > !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+
+## Verify request
+Local:
+Check null: localhost:8082/filteredimage?image_url=
+Invalid url: localhost:8082/filteredimage?image_url=123
+Error url: localhost:8082/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg
+Work url: localhost:8082/filteredimage?image_url=https://images.theconversation.com/files/443350/original/file-20220131-15-1ndq1m6.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C3354%2C2464&q=45&auto=format&w=926&fit=clip
+
+Cloud:
+Check null: http://hoanghuynh-project2-image-filter-starte.us-east-1.elasticbeanstalk.com/filteredimage?image_url=
+Invalid url: http://hoanghuynh-project2-image-filter-starte.us-east-1.elasticbeanstalk.com/filteredimage?image_url=123
+Error url: http://hoanghuynh-project2-image-filter-starte.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg
+Work url: http://hoanghuynh-project2-image-filter-starte.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://images.theconversation.com/files/443350/original/file-20220131-15-1ndq1m6.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C3354%2C2464&q=45&auto=format&w=926&fit=clip
