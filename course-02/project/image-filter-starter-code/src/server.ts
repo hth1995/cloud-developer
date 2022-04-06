@@ -29,7 +29,7 @@ var validator = require('validator');
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
   /**************************************************************************** */
-  app.get( "/filteredimage", async ( req, res ) => {
+  app.get( "/filteredimage", async ( req: express.Request, res: express.Response  ) => {
     // Read image url from query
     const image_url = req.query.image_url;
     try {
@@ -51,7 +51,6 @@ var validator = require('validator');
 
       }
     } catch(e) {
-      console.log(e)
       res.status(500).send(e.toString());
     }
   } );
@@ -59,7 +58,7 @@ var validator = require('validator');
   
   // Root Endpoint
   // Displays a simple message to the user
-  app.get( "/", async ( req, res ) => {
+  app.get( "/", async ( req: express.Request, res: express.Response ) => {
     res.send("try GET /filteredimage?image_url={{}}")
   } );
   
